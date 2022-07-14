@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--Week 4-2 assignment,
+Assignment: UAT Space Program - We Have SOUND!
+Tim Tanco
+tanco114@gmail.com-->
+<html>
+
+    <head>
+        <script src="launchDataDis.js"></script>
+        <script src="dataLoader-1.js"></script>
+        <script src="code.js"></script>
+        <link href="style2.css" rel="stylesheet" type="text/css">
+        <title>
+            Tim Tanco's UATSpace Page
+        </title>
+        <script>
+            var theTime = new Date();
+            var time_interval = 5000;
+            var last_interval = 0;
+            var running = true;
+            var index = 0;
+            var timer;
+            var data = getData();
+        </script>
+    </head>
+    
+   <!-- the file for the photo does not show and shows a 404 not found message--> 
+    <body>
+        <!--Table tro hold UAT Space logo and header text-->
+        <table>
+            <tr>
+                <td><img src="UATspaceLogo.jpg">
+                <td>  
+                    <h1>
+                        UAT Space Program
+                  </h1>  
+                </td>
+            </tr>
+        </table>
+    
+        <!--Data Table-->
+        <!-- "data" style has color now-->
+        <table id="data" border="2" width="70%">
+            <col stle="width: 35%">
+            <col stle="width: 35%">
+            <thead>
+                <th> <!--1st coloumn-->
+                    Data Type
+                </th>
+                <th> <!--2nd coloumn-->
+                    Reading
+                </th>
+            </thead>
+            <tbody> <!--rows for coloumn 1st <td> is for coloumn one 2nd <td> is for 2nd coloumn-->
+                <tr id="seconds"></tr>
+                <tr id="latitude"></tr>
+                <tr id="Longitude"></tr>    
+                <tr id="GPS_Altitude"></tr>       
+                <tr id="BMP_Altitude"></tr>      
+                <tr id="BMP_Pressure"></tr>
+                <tr id="BMP_Temperature"></tr>    
+                <tr id="Digital Temperature"></tr>    
+                <tr id="CSS Temperature"></tr>      
+                <tr id="css_eC02"></tr>     
+                <tr id="CSS_TVOC"></tr>    
+                <tr id="UV"></tr>    
+                <tr id="accelX"></tr>    
+                <tr id="accelY"></tr> 
+                <tr id="accelZ"></tr>
+                <tr id="magneticX"></tr>
+                <tr id="magneticY"></tr>
+                <tr id="MagneticZ"></tr>
+                <tr id="gyroX"></tr>
+                <tr id="gyroY"></tr>
+                <tr id="gyroZ"></tr>
+            </tbody>
+
+        </table>
+     <br>
+    <!--button to run the timer-->
+     <button onclick="startFun();" class="button" id="startButton">Start</button>
+    <!---->
+    <button onclick="stopFun();" class="button" id="stopButton">Stop</button>
+    <br>
+    The current time is: <div id="clockTimer">Press start to display current time</div>
+
+     
+    <!--took out countdown timer-->
+    <!--
+    For our craps game on the html side, we need:
+        1.Button to play craps
+        2.Crap Status Line
+        3.Header saying craps played here
+     
+    the story of our craps game....
+    This Story of craps comes from Star Wars. Han Solo has to figure out a way to get his Ship back from Lando. 
+    Lando has found a way to outsmart Han Solo yet again and regained ownership of the Millenium Falcon. 
+    While traveling with Chewbaca on another mission they run into a crowd playing Craps and has an Idea on on how he can get his ship back 
+    with a game of chance!
+    At least 3-4 sentences
+-->
+    <h2>Please try your hand at Craps!</h2>
+    <div id="crapsStatus">Craps Status</div><br>
+    <button onclick="playCraps();"class="button">Play Craps </button><br>
+    <br>
+    <br>
+    <h3>Play space station sounds</h3>
+    <h4>Warning, it may get loud !!! </h4>
+
+
+    <button class="lgButton" onclick="playStation();">Play space station sounds</button>
+    <!--1st button is left 2nd button is right you dont need to add margin if you need it starting to the far left of the screen-->
+    <button class="lgButton" style="margin:10px;" onclick="playMyLeg();">Play my leg</button>
+    <br>
+    <br>
+    <a href=/index.html>Go to Home</a> | <a href=./boards.html>Go to Boards</a> | <a href=./uatspace.html> 
+        Go to UATSpace Page</a>
+</body>
+
+
+
+</html>
